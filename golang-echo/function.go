@@ -9,6 +9,7 @@ import (
 )
 
 var e *echo.Echo
+var count = 0
 
 func init() {
 	e = echo.New()
@@ -16,13 +17,17 @@ func init() {
 	e.Use(middleware.Recover())
 
 	e.GET("/", top)
-	e.GET("/a", path)
-	e.GET("/b", path)
+	e.GET("/counter", counter)
 	e.GET("/*", path)
 }
 
 func top(c echo.Context) error {
 	return c.String(http.StatusOK, "Hello")
+}
+
+func counter(c echo.Context) error {
+	count++
+	return c.String(http.StatusOK, fmt.Sprintf("〜 あなたは %d 人目の function への訪問者です ~", count))
 }
 
 func path(c echo.Context) error {
