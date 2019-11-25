@@ -2,7 +2,7 @@ const projectId = "pokutuna-dev";
 const { Logging } = require("@google-cloud/logging");
 
 const logging = new Logging({ projectId });
-const logger = logging.log("envs-node-8");
+const logger = logging.log("envs-node-10");
 
 exports["envs-node10"] = async (req, res) => {
   const data = {
