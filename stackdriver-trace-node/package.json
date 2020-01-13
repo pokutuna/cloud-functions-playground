@@ -1,0 +1,11 @@
+{
+  "main": "index.js",
+  "dependencies": {
+    "@google-cloud/logging": "^7.0.0",
+    "@google-cloud/logging-winston": "^3.0.4",
+    "@google-cloud/trace-agent": "^4.2.5",
+    "express": "^4.17.1",
+    "requestlog-cloudfunctions": "https://github.com/pokutuna/requestlog-cloudfunctions.git",
+    "winston": "^3.2.1"
+  }
+}
