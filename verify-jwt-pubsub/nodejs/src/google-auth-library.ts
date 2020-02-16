@@ -33,6 +33,6 @@ export function verify(options: Options) {
 
         next();
       })
-      .catch(err => next(createError(403, 'err')));
+      .catch(err => next(createError(403, err)));
   };
 }
