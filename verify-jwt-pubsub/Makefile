@@ -11,6 +11,13 @@ deploy-nodejs:
 		--source=./nodejs \
 		--trigger-http
 
+.PHONY: deploy-golang
+deploy-golang:
+	$(GCLOUD) functions deploy verify-jwt-pubsub-golang \
+		--runtime=go113 \
+		--entry-point=App \
+		--source=./golang \
+		--trigger-http
 
 
 TOPIC := pubsub-verify-example
