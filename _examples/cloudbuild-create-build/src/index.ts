@@ -1,5 +1,4 @@
 import { CloudBuildClient } from '@google-cloud/cloudbuild';
-import { google } from '@google-cloud/cloudbuild/build/protos/protos';
 
 const projectId = 'pokutuna-playground';
 
