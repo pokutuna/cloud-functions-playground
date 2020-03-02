@@ -1,15 +1,19 @@
 const express = require("express");
+
+const { logHttpRequest } = require("@pokutuna/requestlog-cloudfunctions");
+
 const winston = require("winston");
 const { Logging } = require("@google-cloud/logging");
 const LoggingWinston = require("@google-cloud/logging-winston");
-const { loggingAccessLog } = require("./access_log");
 
 const projectId = "pokutuna-dev";
 
-const handler = (async () => {
+async function init() {
   const app = express();
 
-  app.use(loggingAccessLog({ projectId }));
+  // httpRequest ログを記録する
+  // https://cloud.google.com/logging/docs/reference/v2/rest/v2/LogEntry#HttpRequest
+  app.use(logHttpRequest({ projectId }));
 
   // winston logging middleware
   const logger = winston.createLogger();
@@ -46,6 +50,7 @@ const handler = (async () => {
   });
 
   return app;
-})();
+}
 
+const handler = init();
 exports.app = (req, res) => handler.then(h => h(req, res));
