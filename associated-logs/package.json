@@ -1,5 +1,5 @@
 {
   "dependencies": {
-    "@google-cloud/logging": "^5.5.0"
+    "@google-cloud/logging": "^8.0.5"
   }
 }
