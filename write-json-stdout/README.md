@@ -56,7 +56,6 @@ serialized as a string and written as `textPayload`.
 ```json
 {
   "textPayload": "{\"runtime\":\"nodejs8\",\"key\":\"value\",\"array\":[1,2,3]}",
-  ...
 }
 ```
 
@@ -67,9 +66,10 @@ written as `jsonPayload` and keeps its structure.
 ```json
 {
   "jsonPayload": {
-  "runtime": $GCF_RUNTIME,
-  "key": "value",
-  "array": [1, 2, 3]
+    "runtime": $GCF_RUNTIME,
+    "key": "value",
+    "array": [1, 2, 3]
+  },
 }
 ```
 
