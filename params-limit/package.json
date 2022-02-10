@@ -1,0 +1,10 @@
+{
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.2"
+  },
+  "devDependencies": {
+    "node-fetch": "^2.6.7",
+    "qs": "^6.10.3"
+  }
+}
