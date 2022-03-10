@@ -16,7 +16,7 @@ const body = [...Array(size).keys()].reduce((obj, i) => {
       'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
     },
     body: stringify(body),
-  }).catch(console.err).then(res => {
+  }).then(res => {
     console.log(res.status);
     return res;
   }).then(res => res.json()).then(console.log);
