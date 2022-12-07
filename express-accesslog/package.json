@@ -3,7 +3,7 @@
     "@google-cloud/logging": "^8.0.5",
     "@google-cloud/logging-winston": "^4.0.0",
     "@pokutuna/requestlog-cloudfunctions": "0.0.3",
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "winston": "^3.3.3"
   }
 }
