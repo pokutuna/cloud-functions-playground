@@ -1,7 +1,7 @@
 {
   "main": "index.js",
   "dependencies": {
-    "express": "^4.17.2"
+    "express": "^4.17.3"
   },
   "devDependencies": {
     "node-fetch": "^2.6.7",
