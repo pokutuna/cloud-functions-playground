@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"os"
 
-	function "github.com/pokutuna/cloud-functions-playground/bq-remote-functions"
+	"example.com/function"
 )
 
 func main() {

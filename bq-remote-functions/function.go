@@ -4,7 +4,6 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
-	"log"
 	"net/http"
 	"sync"
 )
@@ -29,7 +28,9 @@ func RemoteFunction(w http.ResponseWriter, r *http.Request) {
 	if err := json.NewDecoder(r.Body).Decode(&bqReq); err != nil {
 		bqRes.ErrorMessage = fmt.Sprintf("Cannot parse request body: %v", err)
 	} else {
-		log.Println(r.Body)
+		// for debugging
+		input, _ := json.Marshal(bqReq)
+		fmt.Println(string(input))
 
 		wg := &sync.WaitGroup{}
 		ctx, cancel := context.WithCancel(context.Background())
@@ -73,7 +74,7 @@ func RemoteFunction(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	log.Println(b)
+	fmt.Println(string(b)) // for debugging
 
 	w.Header().Set("Content-Type", "application/json")
 	w.Write(b)
