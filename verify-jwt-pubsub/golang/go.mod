@@ -8,6 +8,5 @@ require (
 	github.com/labstack/gommon v0.3.0 // indirect
 	github.com/lestrrat-go/jwx v0.9.0
 	github.com/pkg/errors v0.9.1 // indirect
-	golang.org/x/crypto v0.0.0-20200214034016-1d94cc7ab1c6 // indirect
-	golang.org/x/oauth2 v0.0.0-20200107190931-bf48bf16ab8d // indirect
+	golang.org/x/crypto v0.1.0 // indirect
 )
