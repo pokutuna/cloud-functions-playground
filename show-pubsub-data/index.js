@@ -1,7 +1,7 @@
 exports["show-pubsub-data"] = async (req, res) => {
   let data = {};
   try {
-    data = JSON.parse(Buffer.from(req.body.data, "base64").toString());
+    data = JSON.parse(Buffer.from(req.body.message.data, "base64").toString());
   } catch {
     data = {};
   }
